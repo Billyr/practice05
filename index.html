@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="open">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin +Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>CASUAL</title>
 </head>
 <body class="pageGrid">
-
+    
     <main>
         <div class="hero partsGrid">
             <h1>CASUAL</h1>
@@ -47,9 +47,17 @@
 
     </main>
 
-    <button class="nav-button">
+    <button class="nav-button" onclick="navFunc()">
         <span class="sr-only">MENU</span>
     </button>
+
+    <nav class="nav">
+        <ul onclick="navFunc()">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="article.html">ABOUT</a></li>
+            <li><a href="#">CONTACT US</a></li>
+        </ul>
+    </nav>
     
     <ul class="sns">
         <li><a href="#">
@@ -83,6 +91,15 @@
             </a>
         </div>
     </footer>
-    
+    <script>
+
+        window.onload = function() {
+            document.querySelector('html').classList.remove('open');
+        }
+
+        const navFunc = () => {
+            document.querySelector('html').classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
